@@ -1,0 +1,49 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+private/
+organizer/answers.json
+organizer/flags.*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Runtime state and generated artifacts
+data/
+runtime/
+logs/
+artifacts/generated/*
+!artifacts/generated/.gitkeep
+*.pcap
+*.pcapng
+*.img
+*.dd
+*.wav
+*.zip
+*.bin
+
+# Keep only small, explicitly reviewed challenge assets in version control.
