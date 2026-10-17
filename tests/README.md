@@ -8,4 +8,18 @@ Organize tests by scope:
 
 Tests must assert observable behavior, not merely that modules import or endpoints return HTTP 200. Do not use placeholder assertions to represent unfinished work.
 
-For each test command recorded in documentation, report the actual environment and result. The test suite is not implemented yet.
+## Running Tests
+
+Run the test suite using standard Python `unittest`:
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Unit tests under `tests/unit/test_artifacts.py` cover:
+- Deterministic manifest generation and formatting
+- SHA-256 chunked calculation
+- Safe path containment and path traversal protection (`..`, absolute paths, Windows separators)
+- Verification success, missing file detection, and hash mismatch detection
+- Reproducibility across multiple generator runs
+- Subprocess CLI execution for `generate_artifacts.py` and `verify_artifacts.py`
+
